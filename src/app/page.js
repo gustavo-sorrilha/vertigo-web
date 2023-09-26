@@ -1,10 +1,11 @@
 // Component import
-import { Sidebar } from '@/components'
+import { Sidebar, Header } from '@/components'
 
 export default function Home() {
   return (
-    <main className="min-h-screen justify-between">
+    <main className="flex min-h-screen justify-between">
       <Sidebar />
+      <Header />
     </main>
   )
 }
