@@ -25,3 +25,29 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.odd-button {
+  border-radius: 4px;
+  background: #2A253A; 
+  color: #fff; 
+  padding: 8px 0px;
+  display: 'flex';
+  justify-content: 'center';
+  align-items: 'center';
+  gap: '16px';
+  flex: '1 0 0';
+}
+.button-custom {
+  width: 220px;
+  height: 36px;
+  padding: 0;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: #130D25;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  cursor: pointer;
+}
+
