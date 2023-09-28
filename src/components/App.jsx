@@ -137,14 +137,14 @@ export function Kills() {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center', // Centraliza conteúdo verticalmente
-    position: 'relative', // Adiciona posição relativa para o texto
+    justifyContent: 'center', 
+    position: 'relative', 
   };
 
   const textStyle = {
     textAlign: 'center',
     fontSize: '24px',
-    color: '#000000', // Alteração para preto sólido (#000000)
+    color: '#000000', 
     position: 'absolute',
     top: '10px',
     left: '0',
@@ -154,7 +154,7 @@ export function Kills() {
   const percentageStyle = {
     textAlign: 'center',
     fontSize: '24px',
-    color: '#000000', // Alteração para preto sólido (#000000)
+    color: '#000000',
     position: 'absolute',
     top: '50%',
     left: '0',
@@ -166,7 +166,7 @@ export function Kills() {
     textAlign: 'center',
     fontSize: '18px',
     fontWeight: 'bold',
-    color: '#000000', // Alteração para preto sólido (#000000)
+    color: '#000000',
     position: 'absolute',
     top: '0',
     left: '0',
