@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import logoTime1 from '../assets/keyd.png'; 
 import logoTime2 from '../assets/intz.png';
@@ -99,8 +100,7 @@ export function ButtonCustom(){
 };
 export function Mapa(){
     return (
-      
-        <div className="flex flex-col">
+        <div className="flex w-full">
           <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-end', width: '300px', height: '165px', flexShrink: 0, borderRadius: '20px', background: '#369FFF', boxShadow: '0px 10px 30px 0px rgba(138, 197, 62, 0.40)', margin: '10px' }}>
             <div style={{ color: '#fff', fontWeight: 'bold', position: 'absolute', top: '10px', left: '10px' }}>Over de Mapa</div>
             <div style={{ width: '72px', height: '72px', flexShrink: 0, borderRadius: '50%', background: '#fff', textAlign: 'center', lineHeight: '72px', fontSize: '24px', color: 'black', position: 'absolute', top: '50%', left: '10px', transform: 'translateY(-50%)' }}>75%</div>
