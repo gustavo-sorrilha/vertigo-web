@@ -7,6 +7,8 @@ import logoTime5 from '../assets/losgrandes.png';
 import logoTime6 from '../assets/kabum.png';
 import logoTime7 from '../assets/liberty.png';
 import logoTime8 from '../assets/fluxo.png';
+import mapa from '../assets/mapa.png';
+import baron from '../assets/baron.png';
 
 const partidas = [
   {
@@ -43,75 +45,154 @@ const partidas = [
   },
 ];
 
-export default function App() {
+export default function Partidas() {
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-white">
-          <div className="w-11/12 m-auto">
-            <h1 className="text-2xl font-bold mb-4 text-black mt-4">Próximas Partidas</h1>
-            <div className="w-1101 h-294 flex-shrink-0">
-              <div className="flex justify-center items-center gap-8">
-                {partidas.map((partida, index) => (
-                  <div
-                    key={index}
-                    className="w-1101 h-294 flex-shrink-0 border-radius-8 bg-black p-4"
-                  >
-                    <div className="flex justify-between mb-2">
-                        <div className="text-white">{partida.nome}</div>
-                        <div className="text-white">{partida.data}</div>
-                    </div>
-                    <div className="flex justify-center items-center gap-16">
-                      {partida.times.map((time, timeIndex) => (
-                        <div
-                          key={timeIndex}
-                          className="flex-1 flex-shrink-0 border-radius-4 bg-black p-2"
-                        >
-                          <img
-                            src={time.logo}
-                            alt={`Logo ${time.nome}`}
-                            className="w-20 h-20 mx-auto"
-                          />
-                          <button className="odd-button"> Odd: {time.odd}</button>
-                        </div>
-                      ))}
-                    </div>
+      <div className="flex flex-col items-center justify-center min-h-screen bg-white">
+        <div className="w-11/12 m-auto">
+          <h1 className="text-2xl font-bold mb-4 text-black mt-4">Próximas Partidas</h1>
+          <div className="w-1101 h-294 flex-shrink-0">
+            <div className="flex justify-center items-center gap-8">
+              {partidas.map((partida, index) => (
+                <div
+                  key={index}
+                  className="w-1101 h-294 flex-shrink-0 border-radius-8 bg-black p-4"
+                >
+                  <div className="flex justify-between mb-2">
+                    <div className="text-white">{partida.nome}</div>
+                    <div className="text-white">{partida.data}</div>
                   </div>
-                ))}
-              </div>
+                  <div className="flex justify-center items-center gap-16">
+                    {partida.times.map((time, timeIndex) => (
+                      <div
+                        key={timeIndex}
+                        className="flex-1 flex-shrink-0 border-radius-4 bg-black p-2"
+                      >
+                        <img
+                          src={time.logo}
+                          alt={`Logo ${time.nome}`}
+                          className="w-20 h-20 mx-auto"
+                        />
+                        <button className="odd-button"> Odd: {time.odd}</button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+        </div>
+      </div>
+    );
+  }
+  
+export function ButtonCustom(){
+    return (
+    <div className="relative inline-block">
+          <button className="w-220 h-36 px-0 flex-shrink-0 border-radius-8 bg-blue-500 text-white flex items-start justify-start button-custom">
+            <span style={{ color: '#53F', padding: '4px 8px', display: 'flex', alignItems: 'flex-start', gap: '1px' }}>LOUD</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 ml-2 fill-current" viewBox="0 0 20 20">
+              <path d="M10 12l-6-6h12z" />
+            </svg>
+          </button>
+        </div>
+    );
+};
+export function Mapa(){
+    return (
       
-      <div className="relative inline-block">
-      <button className="w-220 h-36 px-0 flex-shrink-0 border-radius-8 bg-blue-500 text-white flex items-start justify-between button-custom">
-        <span style={{ color: '#53F', padding: '8px 16px', display: 'flex', alignItems: 'flex-start', gap: '8px' }}>LOUD</span>
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4 ml-2 fill-current" viewBox="0 0 20 20">
-        <path d="M10 12l-6-6h12z" />
-        </svg>
-      </button>
-      </div>
-
-      <div className="w-300 h-165.487 flex-shrink-0 relative">
-        <div className="bg-#369FFF rounded-tl-2xl rounded-tr-2xl flex items-center justify-between p-4">
-          <div className="w-12 h-12 bg-#369FFF rounded-full flex items-center justify-center shadow-md">
-            <div className="w-8 h-8 bg-white rounded-full text-center text-xs">
-              75%
-            </div>
+        <div className="flex flex-col">
+          <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-end', width: '300px', height: '165px', flexShrink: 0, borderRadius: '20px', background: '#369FFF', boxShadow: '0px 10px 30px 0px rgba(138, 197, 62, 0.40)', margin: '10px' }}>
+            <div style={{ color: '#fff', fontWeight: 'bold', position: 'absolute', top: '10px', left: '10px' }}>Over de Mapa</div>
+            <div style={{ width: '72px', height: '72px', flexShrink: 0, borderRadius: '50%', background: '#fff', textAlign: 'center', lineHeight: '72px', fontSize: '24px', color: 'black', position: 'absolute', top: '50%', left: '10px', transform: 'translateY(-50%)' }}>75%</div>
+            <img src={mapa} alt="Mapa do LoL" style={{ maxWidth: '100%', maxHeight: '100%', position: 'absolute', top: '50%', right: '10px', transform: 'translateY(-50%)' }} />
           </div>
-          <div className="text-white">Over de Mapas</div>
         </div>
-        <div className="bg-#369FFF rounded-bl-2xl rounded-br-2xl p-4">
-          <img
-            src="/caminho-da-imagem-do-mapa.png" // Substitua pelo caminho da imagem do mapa
-            alt="Mapa do League of Legends"
-            className="w-12 h-12 float-right"
-          />
+    );
+};
+export function Baron(){
+    return (
+      
+        <div style={{ width: '300px', height: '165px', flexShrink: 0, borderRadius: '20px', background: '#8AC53E', boxShadow: '0px 10px 30px 0px rgba(138, 197, 62, 0.40)', position: 'relative', display: 'flex', alignItems: 'center', padding: '10px', marginBottom: '10px' }}>
+          <div style={{ color: '#fff', fontWeight: 'bold', position: 'absolute', top: '10px', left: '10px' }}>Under de Baron</div>
+          <div style={{ width: '72px', height: '72px', flexShrink: 0, borderRadius: '50%', background: '#fff', textAlign: 'center', lineHeight: '72px', fontSize: '24px', color: 'black', position: 'absolute', top: '50%', left: '10px', transform: 'translateY(-50%)' }}>60%</div>
+          <img src={baron} alt="Baron do LoL" style={{ maxWidth: '100%', maxHeight: '100%', position: 'absolute', top: '50%', right: '10px', transform: 'translateY(-50%)' }} />
+        </div>
+    );
+};
+export function Kills() {
+  const containerStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  };
+
+  const boxStyle = {
+    width: '180px',
+    height: '183.433px',
+    flexShrink: 0,
+    borderRadius: '20px',
+    opacity: '0.1',
+    background: '#369FFF',
+    marginBottom: '10px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center', // Centraliza conteúdo verticalmente
+    position: 'relative', // Adiciona posição relativa para o texto
+  };
+
+  const textStyle = {
+    textAlign: 'center',
+    fontSize: '24px',
+    color: '#000000', // Alteração para preto sólido (#000000)
+    position: 'absolute',
+    top: '10px',
+    left: '0',
+    width: '100%',
+  };
+
+  const percentageStyle = {
+    textAlign: 'center',
+    fontSize: '24px',
+    color: '#000000', // Alteração para preto sólido (#000000)
+    position: 'absolute',
+    top: '50%',
+    left: '0',
+    transform: 'translateY(-50%)',
+    width: '100%',
+  };
+
+  const labelStyle = {
+    textAlign: 'center',
+    fontSize: '18px',
+    fontWeight: 'bold',
+    color: '#000000', // Alteração para preto sólido (#000000)
+    position: 'absolute',
+    top: '0',
+    left: '0',
+    width: '100%',
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-azure">
+      <div style={containerStyle}>
+        <div style={boxStyle}>
+          <div style={textStyle}>Kill Over</div>
+          <div style={percentageStyle}>70%</div>
         </div>
       </div>
 
-      <div style={{ width: '300px', height: '165px', flexShrink: 0, borderRadius: '20px', background: '#8AC53E', boxShadow: '0px 10px 30px 0px rgba(138, 197, 62, 0.40)', position: 'relative', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px' }}>
-        <div style={{ width: '72px', height: '72px', flexShrink: 0, borderRadius: '50%', background: '#fff', textAlign: 'center', lineHeight: '72px', fontSize: '24px' }}>60%</div>
-        <div style={{ position: 'absolute', top: '10px', left: '10px', color: '#fff', fontWeight: 'bold' }}>Under de Baron</div>
-        <img src="caminho-da-imagem-do-baron.png" alt="Baron do LoL" style={{ maxWidth: '100%', maxHeight: '100%', position: 'absolute', top: '10px', right: '10px' }} />
+      <div style={containerStyle}>
+        <div style={boxStyle}>
+          <div style={labelStyle}>Under</div>
+          <div style={percentageStyle}>30%</div>
+        </div>
       </div>
     </div>
   );
 }
+
+
+
+
+

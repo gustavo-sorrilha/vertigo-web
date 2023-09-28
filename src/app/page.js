@@ -1,6 +1,7 @@
 import React from 'react';
-import { Sidebar, Header, Container } from '@/components';
-import App from '../components/App'; // Atualize o caminho do arquivo App.jsx conforme necessário
+import { Sidebar, Header, Container, App } from '@/components';
+import Partidas from '@/components/App';
+import { ButtonCustom, Mapa, Baron, Kills } from '@/components/App'; 
 
 export default function Home() {
   return (
@@ -9,12 +10,25 @@ export default function Home() {
       <div className='flex flex-col flex-1'>
         <Header />
         <Container>
-          <App />
+          <div className="flex">
+            <div className="flex-1">
+              <Partidas />
+              <ButtonCustom />
+            </div>
+            <div className="flex-1">
+              <Mapa />
+              <Baron />
+            </div>
+            <div className="flex-1">
+              <Kills />
+            </div>
+          </div>
         </Container>
       </div>
     </main>
   );
 }
+
 
 
 
