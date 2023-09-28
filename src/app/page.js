@@ -1,11 +1,12 @@
 import React from 'react';
-import { Sidebar, Header, Container, App } from '@/components';
+import { Sidebar, Header, Container } from '@/components';
 import Partidas from '@/components/App';
 import { ButtonCustom, Mapa, Baron, Kills } from '@/components/App'; 
 
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen">
+    <main className="flex min-h-screen relative"> {/* Adicione "relative" para posicionamento relativo */}
       <Sidebar />
       <div className='flex flex-col flex-1'>
         <Header />
@@ -28,6 +29,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 

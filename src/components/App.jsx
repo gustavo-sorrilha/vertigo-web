@@ -24,7 +24,7 @@ const partidas = [
     data: 'Outubro 14, 15:30',
     times: [
       { nome: 'PAIN', logo: logoTime3, odd: '2.50' },
-      { nome: 'LOUD', logo: logoTime4, odd: '3.20' },
+      { nome: 'LOUD', logo: logoTime4, odd: '1.60' },
     ],
   },
   {
@@ -144,7 +144,7 @@ export function Kills() {
   const textStyle = {
     textAlign: 'center',
     fontSize: '24px',
-    color: '#000000', 
+    color: 'black', 
     position: 'absolute',
     top: '10px',
     left: '0',
@@ -154,7 +154,7 @@ export function Kills() {
   const percentageStyle = {
     textAlign: 'center',
     fontSize: '24px',
-    color: '#000000',
+    color: 'black',
     position: 'absolute',
     top: '50%',
     left: '0',
@@ -166,7 +166,7 @@ export function Kills() {
     textAlign: 'center',
     fontSize: '18px',
     fontWeight: 'bold',
-    color: '#000000',
+    color: 'black',
     position: 'absolute',
     top: '0',
     left: '0',
@@ -184,13 +184,76 @@ export function Kills() {
 
       <div style={containerStyle}>
         <div style={boxStyle}>
-          <div style={labelStyle}>Under</div>
+          <div style={textStyle}>Under</div>
           <div style={percentageStyle}>30%</div>
         </div>
       </div>
     </div>
   );
 }
+
+/* # Não funcional ainda
+export function Chances() {
+  const containerStyle = {
+    width: '220px',
+    height: '150px',
+    position: 'fixed',
+    bottom: '20px',
+    right: '20px',
+    backgroundColor: 'rgba(200, 200, 200, 0.8)', // Fundo cinza claro
+    borderRadius: '10px',
+    padding: '10px',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  };
+
+  const progressBarStyle = {
+    width: '90%',
+    height: '20px',
+    margin: '10px 0',
+    borderRadius: '10px',
+    backgroundColor: '#ccc',
+  };
+
+  const loudChance = 70;
+  const painChance = 30;
+
+  const loudBarStyle = {
+    width: `${loudChance}%`,
+    height: '100%',
+    backgroundColor: '#369FFF',
+    borderRadius: '10px',
+  };
+
+  const painBarStyle = {
+    width: `${painChance}%`,
+    height: '100%',
+    backgroundColor: '#FF5733',
+    borderRadius: '10px',
+  };
+
+  const textStyle = {
+    textAlign: 'center',
+    fontSize: '14px',
+    fontWeight: 'bold',
+    color: 'black', 
+  };
+
+  return (
+    <div style={containerStyle}>
+      <h2 style={textStyle}>Chances de Vitória</h2>
+      <div style={progressBarStyle}>
+        <div style={loudBarStyle}></div>
+      </div>
+      <p style={textStyle}>LOUD: {loudChance}%</p>
+      <p style={textStyle}>PAIN: {painChance}%</p>
+    </div>
+  );
+}*/
+
+
 
 
 
