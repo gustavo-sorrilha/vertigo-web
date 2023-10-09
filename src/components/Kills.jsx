@@ -1,4 +1,7 @@
 "use client";
+
+// Ainda não implementada
+
 export function Kills() {
     return (
       <div className="flex flex-col mt-6">
