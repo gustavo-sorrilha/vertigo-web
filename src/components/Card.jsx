@@ -2,7 +2,7 @@
 "use client";
 import { format } from 'date-fns';
 import { enUS } from 'date-fns/locale';
-import { GlobeAltIcon } from '@heroicons/react/solid';
+// import { GlobeAltIcon } from '@heroicons/react/solid';
 
 
 export function Card({ partida }) {
@@ -14,7 +14,7 @@ export function Card({ partida }) {
     <div className="bg-stone-950 p-4 max-h-60 w-64 rounded-xl">
       <header className="flex justify-between items-center text-slate-500">
       <div className="flex items-center gap-2">
-        <GlobeAltIcon className="h-6 w-6 text-slate-300" />
+        {/* <GlobeAltIcon className="h-6 w-6 text-slate-300" /> */}
         <span>{nome_campeonato && nome_campeonato.nome_campeonato}</span>
       </div>
         <p>{dataFormatada}</p>

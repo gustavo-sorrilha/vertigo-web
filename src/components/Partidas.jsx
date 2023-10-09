@@ -1,7 +1,7 @@
 "use client";
 
-import { Card } from ".";
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { Card } from "./Card";
 
 
 async function carregarDados(){

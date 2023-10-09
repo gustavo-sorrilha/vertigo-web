@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Trophy, List, UserSquare } from "@phosphor-icons/react";
 
 const iconSize = 25;
@@ -8,12 +9,14 @@ const options = [
   { 
     icon: <Trophy size={iconSize} />, 
     label: "Campeonatos", 
-    key: "championships" 
+    key: "championships",
+    goTo: "/"
   },
   { 
     icon: <UserSquare size={iconSize} />, 
     label: "Minha conta", 
     key: "account", 
+    goTo: "profile"
   },
 ];
 
@@ -33,16 +36,18 @@ export function Sidebar() {
       
       {sideBarIsVisible && (
         <ul className="mt-8">
-          {options.map(({ label, key, icon }) => (
-            <li 
-              className={`flex items-center ${activeItem === key && "bg-white"} p-5 cursor-pointer rounded-3xl overflow-hidden`}
-              key={label}
-              onClick={() => setActiveItem(key)}
-            >
-              {icon}
-              <a href="#" className="ml-5">{label}</a>
-            </li>
-          ))}
+          {options.map(({ label, key, icon, goTo }) => (
+              <Link 
+                className={`flex items-center ${activeItem === key ? "bg-white" : "text-black"} p-5 cursor-pointer rounded-3xl overflow-hidden`}
+                key={label}
+                onClick={() => setActiveItem(key)}
+                href={goTo}
+              >
+                {icon}
+                <a href="#" className="ml-5">{label}</a>
+              </Link>
+              )
+          )}
         </ul>
       )}
     </aside>
